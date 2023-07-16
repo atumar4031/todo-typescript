@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  let name: string;
+  let age: number;
+  let address: string[];
+  const country = "Nigeria";
+
+  let Person: Object;
+
+  interface Person {
+    name: string;
+    age: number;
+    nickname: string;
+  }
+
+  let people: Person[];
+
+  let getPeople: () => Person[] // function with no arguments
+
+  let createPerson: (person: Person) => void
+
+  let getPersonById: (personId: number) => Person;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Welcome to typescript</h1>
     </div>
   );
 }
